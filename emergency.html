@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .selected-service {
+      border: 3px solid #ef4444;
+      background-color: #ffe4e6;
+    }
+    .service-img {
+      width: 96px;
+      height: 96px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-purple-500 via-pink-500 to-purple-700 min-h-screen py-10 px-4">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold text-center text-red-600 mb-6">Emergency Help Needed</h1>
+    
+    <form id="emergencyForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+      <input type="text" id="nameInput" placeholder="Your Name" class="border p-3 rounded-xl w-full" required />
+      <input type="tel" id="phoneInput" placeholder="Phone Number" class="border p-3 rounded-xl w-full" required />
+    </form>
+
+    <div class="mb-6 text-center">
+      <button onclick="detectLocation()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+        Detect Location
+      </button>
+      <p id="locationDisplay" class="mt-2 text-sm text-gray-700"></p>
+    </div>
+
+    <h2 class="text-xl font-semibold mb-4 text-center">Select the Emergency Service</h2>
+    <div id="services" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+
+      
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Ambulance">
+        <img src="https://img.icons8.com/color/96/ambulance.png" class="service-img" alt="Ambulance">
+        <h3 class="text-center font-bold text-lg">Ambulance</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Fire Brigade">
+        <img src="https://img.icons8.com/color/96/fire-truck.png" class="service-img" alt="Fire Brigade">
+        <h3 class="text-center font-bold text-lg">Fire Brigade</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Electrician">
+        <img src="https://img.icons8.com/color/96/electricity.png" class="service-img" alt="Electrician">
+        <h3 class="text-center font-bold text-lg">Electrician</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Plumber">
+        <img src="https://img.icons8.com/color/96/plumbing.png" class="service-img" alt="Plumber">
+        <h3 class="text-center font-bold text-lg">Plumber</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Fuel on Car">
+        <img src="https://img.icons8.com/color/96/gas-station.png" class="service-img" alt="Fuel on Car">
+        <h3 class="text-center font-bold text-lg">Fuel on Car</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Girl Safety">
+        <img src="femalesafe.png" class="service-img" alt="Girl Safety">
+        <h3 class="text-center font-bold text-lg">Girl Safety</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Volunteers Nearby">
+        <img src="volen.png" class="service-img" alt="Volunteers Nearby">
+        <h3 class="text-center font-bold text-lg">Volunteers Nearby</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Food on Car">
+        <img src="https://img.icons8.com/color/96/meal.png" class="service-img" alt="Food on Car">
+        <h3 class="text-center font-bold text-lg">Food on Car</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Mechanic on Car">
+        <img src="https://img.icons8.com/color/96/car-service.png" class="service-img" alt="Mechanic on Car">
+        <h3 class="text-center font-bold text-lg">Mechanic on Car</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Tyre Puncture Repair">
+        <img src="https://img.icons8.com/color/96/tire.png" class="service-img" alt="Tyre Puncture Repair">
+        <h3 class="text-center font-bold text-lg">Tyre Puncture Repair</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Police">
+        <img src="https://img.icons8.com/color/96/policeman-male.png" class="service-img" alt="Police">
+        <h3 class="text-center font-bold text-lg">Police</h3>
+      </div>
+
+      <div class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg cursor-pointer" data-service="Grocery Delivery">
+        <img src="https://img.icons8.com/color/96/grocery-bag.png" class="service-img" alt="Grocery Delivery">
+        <h3 class="text-center font-bold text-lg">Grocery on Location</h3>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <button onclick="submitRequest()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full text-lg">
+        Submit Request
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let userLocation = "Not Detected";
+
+    function detectLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const { latitude, longitude } = position.coords;
+          userLocation = `Lat: ${latitude.toFixed(4)}, Lon: ${longitude.toFixed(4)}`;
+          document.getElementById("locationDisplay").innerText = `📍 ${userLocation}`;
+        }, () => {
+          alert("Location access denied.");
+        });
+      } else {
+        alert("Geolocation not supported by your browser.");
+      }
+    }
+
+    document.querySelectorAll('[data-service]').forEach(card => {
+      card.addEventListener('click', () => {
+        document.querySelectorAll('[data-service]').forEach(c => c.classList.remove('selected-service'));
+        card.classList.add('selected-service');
+      });
+    });
+
+    function submitRequest() {
+      const name = document.getElementById("nameInput").value.trim();
+      const phone = document.getElementById("phoneInput").value.trim();
+      const selectedCard = document.querySelector(".selected-service");
+
+      if (!name || !phone || !selectedCard) {
+        alert("❗ Please fill in all fields and select a service.");
+        return;
+      }
+
+      const service = selectedCard.dataset.service;
+
+      
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("phone", phone);
+      formData.append("service", service);
+      formData.append("location", userLocation);
+/////////////////////////////////////////////////////////////////
+      fetch("submit_request.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert(
+          `✅ Thank you for your response!\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📍 Location: ${userLocation}\n🛠️ Service: ${service}\n\n🚀 Our team will reach your location within 5 minutes.`
+        );
+        window.location.href = "emergencyafter.html";
+      })
+      .catch(error => {
+        alert("Error submitting request. Please try again later.");
+        console.error(error);
+      });
+    }
+</script>
+
+</body>
+</html>

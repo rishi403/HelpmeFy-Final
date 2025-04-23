@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helpmefy</title>
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="icon" href="help4.jpg" type="image/jpg" />
+  <script src="https://kit.fontawesome.com/your_kit_code.js" crossorigin="anonymous"></script>
+  <style>
+    .zoom {
+      animation: zoomAnim 0.5s ease;
+    }
+    @keyframes zoomAnim {
+      from {
+        transform: scale(0.95);
+        opacity: 0.7;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .active {
+      background-color: #3b82f6;
+    }
+    .zoom {
+    animation: zoomAnim 0.5s ease;
+  }
+  @keyframes zoomAnim {
+    from { transform: scale(0.95); opacity: 0.7; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .active { background-color: #3b82f6; }
+
+ 
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  </style>
+</head>
+<body class="bg-gray-100 scroll-smooth">
+  <div class="container min-h-screen bg-cover bg-[url('backgroundhome.png')] px-4 md:px-28 py-6">
+    <nav class="flex items-center justify-between mb-10">
+      <img src="logo.png" class="w-40 md:w-52 cursor-pointer" alt="Helpmefy Logo" />
+      <ul class="flex-1 text-center hidden md:flex justify-center space-x-6">
+        <li><a href="#" onclick="scrollToTop()" class="text-black hover:text-blue-600">Home</a></li>
+        
+        
+        <li class="relative group">
+          <div class="text-black hover:text-blue-600 cursor-pointer">About us</div>
+          <ul class="absolute left-0 mt-1 w-48 bg-white border border-gray-200 rounded shadow-lg hidden group-hover:block z-50">
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">About Helpmefy</a></li>
+            <li><a href="aboutdev.html" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">About the Developers</a></li>
+            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-100">Aim of Helpmefy</a></li>
+          </ul>
+        </li>
+        
+    
+        <li><a href="#contact" class="text-black hover:text-blue-600">Contact</a></li>
+        <li><a href="#" class="text-black hover:text-blue-600">Languages</a></li>
+      </ul>
+      <img src="indiaflag.png" class="w-10 cursor-pointer" alt="India Flag" />
+    </nav>
+
+    <div class="flex flex-col md:flex-row gap-10 items-center justify-between bg-white shadow-xl rounded-xl p-8">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Helpmefy!! Simplifying Help, Amplifying Hope</h1>
+        <p class="text-gray-600">A place where we are always ready to help you.</p>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 w-full pt-4">
+          <a href="signup.php" class="flex-1 max-w-xs w-full">
+            <button class="w-full px-6 py-4 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-full shadow-lg transition-all duration-300">
+              Login / SignUp
+            </button>
+          </a>
+          <a href="emergency.html" target="_blank" class="flex-1 max-w-xs w-full">
+            <button class="w-full px-6 py-4 bg-red-600 hover:bg-red-700 text-white text-lg font-bold rounded-full shadow-lg transition-all duration-300">
+              Emergency??
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img src="help1.png" id="banner" class="rounded-lg shadow-lg w-full max-w-md mx-auto" alt="Help Image" />
+        <ul class="flex justify-center mt-4 space-x-2">
+          <li class="btn w-4 h-4 rounded-full bg-blue-400 cursor-pointer active"></li>
+          <li class="btn w-4 h-4 rounded-full bg-blue-200 cursor-pointer"></li>
+          <li class="btn w-4 h-4 rounded-full bg-blue-200 cursor-pointer"></li>
+          <li class="btn w-4 h-4 rounded-full bg-blue-200 cursor-pointer"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- //////////////////////// -->
+  
+<div class="max-w-6xl mx-auto px-4 mt-[-60px] relative z-10"> 
+  <div class="bg-white shadow-xl rounded-xl overflow-hidden w-full">
+    <div class="overflow-hidden rounded-xl relative">
+      <div id="carouselImages" class="flex transition-transform duration-500 ease-in-out w-full">
+        <img src="helpfoot3.png" class="w-full object-cover h-64 sm:h-80 md:h-96" alt="Slide 1" />
+        <img src="helpfoot2u.png" class="w-full object-cover h-64 sm:h-80 md:h-96" alt="Slide 2" />
+        <img src="helpfoot1.png" class="w-full object-cover h-64 sm:h-80 md:h-96" alt="Slide 3" />
+      </div>
+    </div>
+    <div class="flex justify-center mt-4 space-x-2 pb-4">
+      <button onclick="moveSlide(0)" class="w-3 h-3 rounded-full bg-blue-400"></button>
+      <button onclick="moveSlide(1)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+      <button onclick="moveSlide(2)" class="w-3 h-3 rounded-full bg-blue-200"></button>
+    </div>
+  </div>
+</div>
+<section id="contact" class="bg-white py-16 px-6 md:px-20 mt-10 rounded-xl shadow-xl max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Get in Touch with Us</h2>
+  <div class="grid md:grid-cols-2 gap-10">
+   
+    <div class="space-y-6 text-blue-900">
+      <div class="flex items-center space-x-4">
+        <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
+        <p class="text-lg font-medium">WhatsApp us: <a href="https://wa.me/911000100095" class="text-blue-600 hover:underline">+91-1000100095</a></p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-envelope text-red-500 text-2xl"></i>
+        <p class="text-lg font-medium">Email us: <a href="mailto:support@helpmefy.com" class="text-blue-600 hover:underline">support@helpmefy.com</a></p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-fax text-indigo-500 text-2xl"></i>
+        <p class="text-lg font-medium">Fax us: +91-0612452445</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-phone text-blue-500 text-2xl"></i>
+        <p class="text-lg font-medium">Call us: +91-1000100095</p>
+      </div>
+      <div class="flex items-center space-x-4">
+        <i class="fas fa-map-marker-alt text-pink-500 text-2xl"></i>
+        <p class="text-lg font-medium">Write to us: Lovely Professional University, Jalandhar - Delhi G.T. Road, Phagwara, Punjab, 144411</p>
+      </div>
+    </div>
+
+  
+    <div>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <textarea placeholder="Your Message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+        <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 shadow-md font-bold">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  
+  <footer class="bg-gray-900 text-white px-6 md:px-10 py-12 mt-10">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-blue-400 underline">Learn More</h3>
+        <ul class="space-y-2 text-blue-400">
+          <li><a href="#">Why Helpmefy?</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">What We Do</a></li>
+          <li><a href="#">Where We Work</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Ratings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-blue-400 underline">An organization you can trust</h3>
+        <p class="text-blue-300">When you give, 85% of every rupee goes directly to our mission. <a href="#" class="underline">Learn more about our commitment.</a></p>
+        <div class="flex space-x-4 mt-4">
+          <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full shadow-md font-bold">DONATE NOW</button>
+          <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full shadow-md font-bold">Whatsapp Support</button>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-blue-400 underline">Contact Us</h3>
+        <p class="text-blue-300">Helpmefy HQ<br>Lovely Professional University, Jalandhar - Delhi G.T. Road,
+          Phagwara, Punjab (India) - 144411</p><br>
+        <p class="text-blue-300">Main Office: +91-1000100095 | Mon–Fri: 9:00am–5:00pm IST</p>
+        <p class="text-blue-300">Donor Services: +91-0612452445 | MonFri: 8:00am–5:00pm IST</p>
+        <p class="italic text-blue-300 mt-2">Report fraud, abuse, wrongdoing</p>
+        <p class="text-blue-300">Safeguarding</p>
+        <div class="flex space-x-4 mt-4 text-white text-xl">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 pt-6 text-sm text-blue-300 flex flex-col md:flex-row justify-between">
+      <div class="flex flex-wrap gap-3 mb-4 md:mb-0">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Terms of Use</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Health Privacy</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Legal</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Finance</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Sitemap</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Newsroom</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Careers</a>
+        <span>|</span>
+        <a href="#" class="hover:underline">Contact Us</a>
+      </div>
+      <p class="text-blue-300">&copy; 2025 Helpmefy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+  <script>
+    const banner = document.getElementById("banner");
+    const btns = document.querySelectorAll(".btn");
+    const images = ["help1.png", "help2.jpg", "help3.jpg", "help4.jpg"];
+
+    btns.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        banner.classList.add("zoom");
+        banner.src = images[index];
+        setTimeout(() => banner.classList.remove("zoom"), 500);
+
+        btns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+      });
+    });
+    const carousel = document.getElementById("carouselImages");
+
+  function moveSlide(index) {
+    const slideWidth = carousel.offsetWidth;
+    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    
+    const dots = event.target.parentElement.querySelectorAll("button");
+    dots.forEach(dot => dot.classList.replace("bg-blue-400", "bg-blue-200"));
+    event.target.classList.replace("bg-blue-200", "bg-blue-400");
+  }
+  function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+  window.addEventListener("resize", () => moveSlide(0));
+  </script>
+</body>
+</html>

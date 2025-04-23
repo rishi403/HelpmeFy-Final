@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Developers</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .profile-card {
+            transition: transform 0.3s;
+        }
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+        .hidden-info {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-500 to-pink-400 min-h-screen">
+
+    
+    <header class="bg-purple-800 text-white text-center py-6 shadow-lg">
+        <h1 class="text-3xl font-semibold">About the Developers</h1>
+    </header>
+
+    
+    <section class="container mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Rishikesh Mishra -->
+        <div class="profile-card bg-white shadow-md rounded-lg p-4 text-center">
+            <img src="rishiup.png" alt="Rishikesh Mishra" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Rishikesh Mishra</h2>
+            <p class="text-sm text-gray-600">Team Leader</p>
+            <button onclick="toggleInfo('rishikesh')" class="mt-2 px-4 py-2 bg-purple-500 text-white rounded-lg">Know More</button>
+            <div id="rishikesh" class="hidden-info text-left mt-4 text-sm text-gray-600">
+                <p><strong>Reg No: 12303181</strong></p>
+                <p>Rishikesh Mishra has played a key role as the Team Leader of the Helpmefy project. He was responsible for the overall investigation and coordination of the development process. His contributions span both the frontend and backend development, ensuring smooth functionality and user experience. He also handled the content writing to align the platform's messaging with its mission.</p>
+            </div>
+        </div>
+
+        <!-- Shubham Kumar -->
+        <div class="profile-card bg-white shadow-md rounded-lg p-4 text-center">
+            <img src="shbham.jpeg" alt="Shubham Kumar" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Shubham Kumar</h2>
+            <p class="text-sm text-gray-600">Frontend Developer</p>
+            <button onclick="toggleInfo('shubham')" class="mt-2 px-4 py-2 bg-purple-500 text-white rounded-lg">Know More</button>
+            <div id="shubham" class="hidden-info text-left mt-4 text-sm text-gray-600">
+                <p><strong>Reg No: 12325343</strong></p>
+                <p>Shubham Kumar contributed to the Helpmefy website as a Frontend Developer, working on crafting user-friendly interfaces and responsive designs. He also served as a Content Writer, helping shape the platform’s communication and user-facing content to effectively convey its purpose.</p>
+            </div>
+        </div>
+
+        <!-- Sahil Kumar -->
+        <div class="profile-card bg-white shadow-md rounded-lg p-4 text-center">
+            <img src="sahil.jpeg" alt="Sahil Kumar" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Sahil Kumar</h2>
+            <p class="text-sm text-gray-600">Frontend Developer & Researcher</p>
+            <button onclick="toggleInfo('sahil')" class="mt-2 px-4 py-2 bg-purple-500 text-white rounded-lg">Know More</button>
+            <div id="sahil" class="hidden-info text-left mt-4 text-sm text-gray-600">
+                <p><strong>Reg No: 12315034</strong></p>
+                <p>Sahil Kumar worked on the Helpmefy website as a Frontend Developer, focusing on building clean and intuitive UI components. Alongside development, he contributed as a Researcher, gathering insights and references that helped guide key design and feature decisions throughout the project.</p>
+            </div>
+        </div>
+
+        <!-- Rakesh Tripathi -->
+        <div class="profile-card bg-white shadow-md rounded-lg p-4 text-center">
+            <img src="rakesh.jpeg" alt="Rakesh Tripathi" class="w-32 h-32 mx-auto rounded-full mb-4">
+            <h2 class="text-xl font-semibold">Rakesh Chandra Tripathy</h2>
+            <p class="text-sm text-gray-600">Front & Backend Developer</p>
+            <button onclick="toggleInfo('rakesh')" class="mt-2 px-4 py-2 bg-purple-500 text-white rounded-lg">Know More</button>
+            <div id="rakesh" class="hidden-info text-left mt-4 text-sm text-gray-600">
+                <p><strong>Reg No: 12315679</strong></p>
+                <p>Responsible for designing and implementing both the client-side interface and server-side logic of web applications. Skilled in creating responsive UI with modern frameworks and ensuring robust backend performance using secure and scalable practices.
+
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        
+        function toggleInfo(id) {
+            var info = document.getElementById(id);
+            if (info.classList.contains('hidden-info')) {
+                info.classList.remove('hidden-info');
+            } else {
+                info.classList.add('hidden-info');
+            }
+        }
+    </script>
+
+</body>
+</html>

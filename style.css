@@ -1,0 +1,123 @@
+.row{
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+
+
+.col-1, .col-2{
+    flex-basis: 50%;
+    overflow: hidden;
+}
+
+
+
+#col-1-text{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: #333;
+}
+
+
+
+.col-2 img{
+    width:100%;
+    position: relative;
+   
+}
+
+
+
+.col-1{
+    padding: 8% 5%;
+    position: relative;
+}
+
+
+
+.col-1 p{
+    color: #777;
+    line-height: 22px;
+    margin: 15px 0px 30px;
+}
+
+
+
+.picdotswitch{
+    
+    bottom: 40px;
+}
+
+
+
+.picdotswitch li{
+    list-style: none;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 50px;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+
+
+.picdotswitch .active{
+    background: #333;
+
+}
+
+
+.zoom{
+    animation: zoomout 0.5s linear 1; 
+}
+
+@keyframes zoomout{
+    0%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+button{
+    padding: 15px 260px;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    background: red;
+    color:white;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: solid;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+
+}
+
+#logbut{
+    padding: 15px 200px;
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    background: blue;
+    color:white;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: solid;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+/* nav{
+    background-image: url("helpbackvid.gif");
+} */
